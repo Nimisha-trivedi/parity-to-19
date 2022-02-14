@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="fname" id="fname">
+	<input type="text" name="lname" id="lname">
+	<input type="date" name="dob" id="dob">
+	<input type="text" name="place" id="place">
+	<button onclick="getId()">GET id</button>
+	<script>
+		function getId(){
+		let obj={firstname:document.getElementById('fname').value,lastname:document.getElementById('lname').value,dob:document.getElementById('dob').value,place:document.getElementById('place').value}
+		console.log(obj)
+		let arr=[]
+		let a=obj.firstname.toUpperCase().split("")
+		let b=obj.lastname.toUpperCase().split("")
+		let c=obj.dob.split("")
+		let d=obj.place.toUpperCase().split("")
+		arr.push(a[0],a[1],b[0],b[1],c[c.length-2],c[c.length-1],c[2],c[3],d[0],d[1],d[2])
+		document.write("Your ID is : "+arr.join(""))
+
+	}
+
+		
+	</script>
+
+</body>
+</html>

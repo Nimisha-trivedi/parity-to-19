@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let str="A new search engine come into market"
+		let arr=str.split(" ")
+	let result=arr.sort(function(a, b){
+  return b.length - a.length;
+});
+	console.log(result)
+	document.write("Keywords are : "+result[0]+","+ result[1]+","+result[2])
+	</script>
+
+</body>
+</html>

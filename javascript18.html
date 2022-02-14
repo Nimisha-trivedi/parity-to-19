@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="name" id="name" />
+    <input type="text" name="name" id="name" />
+    <input type="email" name="email" id="email" />
+    <button onclick="create()">Create Id</button>
+    <script>
+      function create() {
+        let str = document.getElementById("name").value;
+        let arr = str.toLowerCase().split("");
+        let ran = Math.floor(Math.random() * 100) + 1;
+        console.log(ran);
+        for (i = 0; i < arr.length; i++) {
+          if (arr[i] == " ") {
+            arr[i] = "_";
+          }
+        }
+        let result = arr.join("") + ran;
+        document.write("Your ID is : " + result);
+      }
+    </script>
+  </body>
+</html>
